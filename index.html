@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Glitch</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="mgGlitch.min.js"></script>
+</head>
+<body>
+	<div class="lines">
+		<div class="y-first-line"></div>
+		<div class="y-second-line"></div>
+		<div class="y-third-line"></div>
+	</div>
+	<div class="container">
+		<div class="glitch-img"><h3>..is that real?</h3></div>
+	</div>
+	<span class="btn anim-button" onclick="goBack()"><< go back</span>
+	<script>
+		function goBack() {
+		  window.history.back()
+		}
+	</script>
+
+	<script type="text/javascript">
+		$(function() {
+			$(".glitch-img").mgGlitch({
+				destroy: false,
+				glitch: true,
+				scale: true,
+				blend: true,
+				blendModeType: 'hue',
+				glitch1TimeMin: 600,
+				glitch1TimeMax: 800,
+				glitch2TimeMin: 10,
+				glitch2TimeMax: 120,
+				zIndexStart : 4,
+			})
+		});
+	</script>
+</body>
+</html>
